@@ -1,11 +1,12 @@
-import { motion } from 'framer-motion'
-import { Button } from "@/components/ui/button"
-import { SiFiverr, SiGoogle } from 'react-icons/si'
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { SiFiverr, SiGoogle } from "react-icons/si";
+import { API_BASE_URL } from "@/const/const";
 
 export default function Login() {
   const handleGoogleLogin = () => {
-    window.location.href = 'http://localhost:4000/api/v1/auth/google'
-  }
+    window.location.href = `${API_BASE_URL}/auth/google`;
+  };
 
   return (
     <div className="flex min-h-screen items-center justify-center p-4">
@@ -19,11 +20,15 @@ export default function Login() {
             <SiFiverr className="text-7xl" />
           </div>
           <h1 className="text-4xl font-black tracking-tighter">SafeMessage</h1>
-          <p className="text-muted-foreground font-medium">Professional communication, secured by AI.</p>
+          <p className="text-muted-foreground font-medium">
+            Professional communication, secured by AI.
+          </p>
         </div>
 
         <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-8 rounded-2xl shadow-sm space-y-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-zinc-400">Continue with</p>
+          <p className="text-sm font-bold uppercase tracking-widest text-zinc-400">
+            Continue with
+          </p>
           <Button
             onClick={handleGoogleLogin}
             className="w-full h-14 rounded-xl bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-700 transition-all flex items-center justify-center gap-4 font-bold shadow-sm"
@@ -37,5 +42,5 @@ export default function Login() {
         </div>
       </motion.div>
     </div>
-  )
+  );
 }
