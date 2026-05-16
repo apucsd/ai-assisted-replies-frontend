@@ -32,6 +32,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { API_BASE_URL } from "@/const/const";
 
 export default function Home() {
   const [originalText, setOriginalText] = useState("");
