@@ -21,7 +21,7 @@ export const api = createApi({
 
     // Projects
     getProjects: builder.query<any[], void>({
-      query: () => "/projects",
+      query: () => "/projects/my",
       transformResponse: (response: { data: any[] }) => response.data,
       providesTags: ["Projects"],
     }),
